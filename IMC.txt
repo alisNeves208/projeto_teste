@@ -1,0 +1,45 @@
+<?php
+/* 
+    Atividade referente a aula 7 da disciplina de Gerência de Configuração.
+    Crie um programa em uma linguagem de programação de sua preferência 
+    que calcule o IMC(Índice de Massa Corpórea)
+    */
+
+?>
+
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="_css/estilo.css"/>
+
+    <head>
+        <title> IMC </title>
+
+    </head>
+
+    <body>
+        <div>
+            <?php
+               
+                $peso = $_GET['P'];
+		        $altura = $_GET['A'];
+		 
+                $Soma1 = $altura*$altura;
+                $conta2 = $peso/$Soma1;
+                
+                $resultado = number_format($conta2);
+                     
+                   echo '<h1>IMC</h1>';
+                  
+                    
+                    if(isset($resultado) && $resultado != '0'){;	
+                        echo "O resultado do calculo do seu IMC é ==> $resultado";
+                    }else{
+                        echo "Por favor, utilize apenas numeros!";	
+                    }
+                   
+                 // Exemplo para executar, adicionando na URL o valor do &_GET, http://localhost/IMC.php?P=50&A=1.30
+            ?>
+        </div>
+    </body>
+</html>
