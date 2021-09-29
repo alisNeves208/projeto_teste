@@ -20,7 +20,8 @@
     <body>
         <div>
             <?php
-               
+               // git
+
                 $peso = $_GET['P'];
 		        $altura = $_GET['A'];
 		 
